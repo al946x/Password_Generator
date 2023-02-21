@@ -95,30 +95,30 @@ var results = "";
 // Function to prompt user for password options
 function getPasswordOptions() {
 while (parseInt(pwLength)<10||parseInt(pwLength)>64||parseInt(pwLength)==''||isNaN(parseInt(pwLength))) { 
-pwLength=prompt('please choose a password length between 10 and 64 characters')
+pwLength=prompt('Please Choose a Password Length Between 10 and 64 Characters')
 }
-var uppercaseConfirmation = confirm('would you like uppercase letters in your password?')
+var uppercaseConfirmation = confirm('Would You Like Uppercase Letters in Your Password?')
 if (uppercaseConfirmation === true) { 
   userChoices = userChoices.concat(upperCasedCharacters)
   
 }
-var lowercaseConfirmation = confirm('would you like lowercase letters in your password?')
+var lowercaseConfirmation = confirm('Would You Like Lowercase Letters in Your Password?')
 if (lowercaseConfirmation === true) { 
   userChoices = userChoices.concat(lowerCasedCharacters)
   
 }
-var numericConfirmation = confirm('would you like numbers in your password?')
+var numericConfirmation = confirm('Would You Like Numbers in Your Password?')
 if (numericConfirmation === true) { 
   userChoices = userChoices.concat(numericCharacters)
   
 }
-var specialCharConfirmation = confirm('would you like special characters in your password?')
+var specialCharConfirmation = confirm('Would You Like Special Characters in Your Password?')
 if (specialCharConfirmation === true) { 
   userChoices = userChoices.concat(specialCharacters)
   
 }
 if (uppercaseConfirmation===false&&lowercaseConfirmation===false&&numericConfirmation===false&&specialCharConfirmation===false) {
-  alert('you have to choose at least one type of character to generate your password')
+  alert('You Have to Choose At Least One Type of Character to Generate Your Password')
   window.location.reload()
 }
 }
